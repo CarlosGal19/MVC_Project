@@ -2,7 +2,9 @@ import express from 'express';
 import cors from 'cors';
 import { config } from 'dotenv';
 import connectDB from './backend/config/db.js';
-import test from './backend/controllers/studentController.js';
+import passedTest from './backend/controllers/passed.controller.js';
+import failedTest from './backend/controllers/failed.controller.js';
+import remedialTest from './backend/controllers/remedial.controller.js';
 
 const app = express();
 
@@ -22,4 +24,6 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
-test();
+passedTest();
+failedTest();
+remedialTest();

@@ -1,7 +1,11 @@
 import { Schema, model } from 'mongoose'
 
-const StudentSchema = new Schema({
+const PassedSchema = new Schema({
     name: {
+        type: String,
+        required: true
+    },
+    middle_name: {
         type: String,
         required: true
     },
@@ -15,6 +19,6 @@ const StudentSchema = new Schema({
     },
 })
 
-const Student = new model('Student', StudentSchema);
+const Passed = new model('Passed', PassedSchema);
 
-export default Student;
+export default Passed;
